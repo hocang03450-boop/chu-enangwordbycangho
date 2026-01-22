@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "outDir": "./build",
+    "rootDir": ".",
+    "jsx": "react-jsx",
+    "module": "esnext",
+    "target": "esnext",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true
+  },
+  "include": ["**/*.ts", "**/*.tsx", "metadata.json"],
+  "exclude": ["node_modules", "scripts"]
+}
