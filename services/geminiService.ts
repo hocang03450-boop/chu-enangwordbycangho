@@ -1,3 +1,4 @@
+
 import { GoogleGenAI, Schema, Type } from "@google/genai";
 import { pdfToImageBase64 } from "./pdfService";
 
@@ -53,7 +54,7 @@ export const extractContentWithSmartCrop = async (file: File): Promise<Conversio
   }
 
   const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
-  const modelName = 'gemini-2.5-flash'; 
+  const modelName = 'gemini-3-flash-preview'; 
 
   try {
     const filePart = await fileToGenerativePart(file);
@@ -146,7 +147,7 @@ export const generateImageFromText = async (prompt: string): Promise<string> => 
   
   try {
     const response = await ai.models.generateContent({
-      model: 'gemini-2.5-flash-image',
+      model: 'gemini-3.0-flash-preview',
       contents: {
         parts: [
           { text: prompt }
